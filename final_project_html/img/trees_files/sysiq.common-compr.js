@@ -1,0 +1,16 @@
+/*!
+ * (c) 2010 SysIQ, Inc. All rights reserved.
+ *
+ * This product is protected by United States laws,
+ * international copyright treaties and all other applicable
+ * national or international laws.
+ *
+ * This software may not, in whole or in part, be copied,
+ * photocopied, translated, modified, or reduced to any
+ * electronic medium or machine readable form
+ * without the prior written consent of SysIQ, Inc.
+ *
+ * Filename: commons.js
+ * Author:   Alexander Goldobin
+ */
+Date.fromObj=function(b,a){return a?new Date(b.year,b.month-1,b.day):new Date(b.year,b.month-1,b.day,b.hours,b.minutes,b.seconds,b.milliseconds)};Date.prototype.addMonths=function(b){var d=Math.ceil(b/12);b=b-(d*12);var a=this.getMonth()+b;var c=new Date(this.getTime());if(a<0){c.setMonth(12+a);c.setYear(this.getFullYear()+d-1)}else{if(a>11){c.setMonth(a-12);c.setYear(this.getFullYear()+d+1)}else{c.setMonth(a);c.setYear(this.getFullYear()+d)}}return c};Date.prototype.formatAsUsDateShort=function(){var b=(""+this.year);var a=b.length>2?b.substr(2,b.length-2):b;return(this.month+1)+"/"+this.day+"/"+a};String.prototype.toUpperCaseFirst=function(){if(this.length>1){var a=this.substr(0,1).toUpperCase();return a+this.substr(1,this.length-1)}else{return this.toUpperCase()}};(function(a){a.representArray=function(b,f){var c="";var e=0;for(var d=0;d<b.length;++d){var g=jQuery.trim(jQuery.isFunction(b[d])?b[d]():b[d]);if(g.length>0){if(e++>0){c+=f}c+=g}}return c}})(jQuery);(function(a){a.mapDict=function(e,b){var c={};a.each(e,function(f,d){c[f]=b(f,d)});return c};a.mapSelectors=function(b){return a.mapDict(b,function(d,c){return a(c)})};a.fn.mapSelectors=function(c){var b=a(this);return a.mapDict(c,function(e,d){return b.find(d)})}})(jQuery);(function(a){a.isNothing=function(b){return b==null||a.trim(b).length==0}})(jQuery);(function(a){a.property=function(b){a.fn[b]=function(){if(arguments.length>0){this.trigger(b,arguments[0])}else{var c={result:null};this.trigger(b,c);return c.result}}};a.fn.propertyHandler=function(b,c){this.bind(b,function(f,d){if(f.target!=this){return}if(a.isFunction(c.get)){d.result=c.get()}if(a.isFunction(c.set)){c.set(d)}})}})(jQuery);(function(a){a.eventShortcut=function(b){a.fn[b]=function(c){if(a.isFunction(c)){this.bind(b,c)}else{this.trigger(b)}}}})(jQuery);(function(a){a.objectSize=function(b){var c=0;a.each(b,function(e,d){c++});return c}})(jQuery);(function(a){if(!a.validator){return}a.validator.addMethod("creditCardExpiration",function(k,d,c){var e=new Date().getMonth()+1;var j=new Date().getFullYear();var f=a(c.month);var g=a(c.year);var h=parseInt(f.val(),10);var i=parseInt(g.val(),10);return(i>j)||((i===j)&&(h>=e))},"Your Credit Card Expiration date is invalid.");var b=/^((67\d{2})|(4\d{3})|(5[1-5]\d{2})|(6011))(-?\s?\d{4}){3}|(3[4,7])\d{2}-?\s?\d{6}-?\s?\d{5}$/i;a.validator.addMethod("creditCardStrict",function(d,c,f){var e=d.replace(/-/g,"");return this.optional(c)||a.trim(d).length>0&&b.test(e)},"Please enter a correct credit card number.")})(jQuery);

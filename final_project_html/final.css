@@ -1,0 +1,206 @@
+@charset "utf-8";
+/* CSS Document */
+
+#title {
+	height: 100px;
+	width: 100%;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 35px;
+	font-size: 18px;
+	color: #FFF;
+	text-indent: 18;
+	font-style: italic;
+	white-space: normal;
+	text-align: center;
+	line-height: 100px;
+}
+
+#containerdiv {
+	margin: 0 auto;
+	width: 600px;
+}
+#containerdiv #body #contactinfo {
+	width: 600px;
+}
+#containerdiv #body #contactinfo #phone {
+	float: left;
+	width: 300px;
+	text-align: center;
+}
+#containerdiv #body #contactinfo #address {
+	float: right;
+	width: 300px;
+	text-align: center;
+}
+#containerdiv #body #contactinfo p {
+	text-align: center;
+}
+
+
+
+
+
+body {
+	background-color: #CC9;
+}
+div {
+	background-color: #963;
+}
+#nav {
+	height: 20px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#body {
+	height: 500px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: justify;
+}
+#footer {
+	background-color: #FFF;
+	height: 50px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	line-height: 30px;
+	padding: 0px;
+}
+p {
+	text-indent: 30px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #FFF;
+	font-weight: normal;
+	text-align: justify;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin: 0px;
+}
+h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: 10px;
+	margin: 1px;
+}
+#footnav {
+	list-style-type: none;
+	word-spacing: 50px;
+	text-align: center;
+	white-space: normal;
+	float: none;
+	margin: 0px;
+	padding: 0px;
+}
+#footer #nav2 {
+	background-color: #FFF;
+	width: 600px;
+}
+
+#footer #footnav ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+#footer #footnav li {
+	display: inline;
+	line-height: 50px;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+#title #emblem {
+	float: left;
+	padding: 0px;
+}
+footer p {
+	text-align: center;
+	color: #000;
+	font-family: "Times New Roman", Times, serif;
+	font-size: small;
+	line-height: 15px;
+}
+#sharebuttons {
+	float: left;
+	background-color: #FFF;
+	height: 50px;
+}
+#containerdiv #blog article h3 {
+	text-align: center;
+}
+#containerdiv #blog article #form {
+	margin-right: auto;
+	margin-left: auto;
+	width: 200px;
+}
+#containerdiv #blog article h4 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+}
+
+#containerdiv #body #media {
+	width: 350px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px;
+}
+#containerdiv #body #media #video {
+	margin: auto;
+	width: 308px;
+}
+#media h1 {
+	text-align: center;
+}
+#containerdiv #body {
+	height: auto;
+}
+#containerdiv #body #tablecontain {
+	width: 550px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#producttable {
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#producttable, td {
+	border: 1px solid white;
+	color: white;
+}
+
+#producttable tr td img {
+	margin: 0 auto;
+	display: block;
+}
+#containerdiv #body #map {
+	padding: 10px;
+	clear: both;
+	height: 250px;
+	width: 350px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	text-align: center;
+}
+#containerdiv #body #aboutus h1 {
+	text-align: center;
+}
